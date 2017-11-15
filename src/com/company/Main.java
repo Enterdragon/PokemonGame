@@ -20,5 +20,7 @@ public class Main {
         int myBattleLevel = battle.getLevel(myPokemon);
         System.out.println("My Party's total level is " + myBattleLevel);
 
+        System.out.println("Hello world");
+
     }
 }
