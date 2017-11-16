@@ -10,8 +10,8 @@ public class PokemonBattle {
 
         int myBattleLevel = 0;
         for (Pokemon p : myPokemon) {
-            System.out.print(p.getName() + ", ");
-            System.out.print("a " + p.getBreed() + ", ");
+            System.out.print(p.getNickName() + ", ");
+            System.out.print("a " + p.getName() + ", ");
             System.out.print(p.getType() + " type, ");
             System.out.println("lvl. " + p.getLevel());
             myBattleLevel += p.getLevel();

@@ -1,16 +1,34 @@
 package com.company.model;
 
 public enum PokemonBreed {
-    PIKACHU("Pikachu"), CHARMANDER("Charmander"), SQUIRTLE("Squirtle"), IVYSAUR("Ivysaur");
+    PIKACHU("Pikachu", "Electric"),
+    CHARMANDER("Charmander", "Fire"),
+    SQUIRTLE("Squirtle", "Water"),
+    IVYSAUR("Ivysaur", "Grass");
 
-    private String breed;
+    private String name;
+    private String type;
 
-    PokemonBreed(String breed) {
-        this.breed = breed;
+    PokemonBreed(String name, String type) {
+        this.name = name;
+        this.type = type;
     }
 
-    @Override
-    public String toString() {
-        return breed;
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+
     }
 }

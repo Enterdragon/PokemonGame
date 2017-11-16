@@ -2,31 +2,41 @@ package com.company.model;
 
 public class Pokemon {
 
-    private String name = "Pika";
-    private int level = 12;
-    private String type = "Electric";
-    private PokemonBreed breed = PokemonBreed.PIKACHU;
+    private String nickName;
+    private int level;
+    private PokemonBreed breed;
 
-    public Pokemon() {}
 
-    public Pokemon(PokemonBreed breed, int level, String type, String name) {
-        this.breed = breed;
-        this.level = level;
-        this.type = type;
-        this.name = name;
+    public Pokemon(PokemonBreed breed, int level) {
+        this(breed, level, breed.getName());
     }
 
-//    public Pokemon(PokemonBreed breed, int level, String type) {
-//        this(breed, level, type, breed);
-//    }
+    public Pokemon(PokemonBreed breed, int level, String nickName) {
+        this.breed = breed;
+        this.level = level;
+        this.nickName = nickName;
+    }
+
+
+
+
+
+
+
+    public String getNickName() {
+        return this.nickName;
+    }
+
 
     public String getName() {
-        return name;
+        return this.breed.getName();
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.breed.setName(name);
     }
+
+
 
     public int getLevel() {
         return level;
@@ -36,13 +46,17 @@ public class Pokemon {
         this.level = level;
     }
 
+
+
     public String getType() {
-        return type;
+        return this.breed.getType();
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.breed.setType(type);
     }
+
+
 
     public PokemonBreed getBreed() {
         return breed;
