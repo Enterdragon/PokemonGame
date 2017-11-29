@@ -1,68 +1,32 @@
 package com.company.model;
 
 public class Pokemon {
-
-    private String nickName;
+    private String name;
     private int level;
     private PokemonBreed breed;
 
-
-    public Pokemon(PokemonBreed breed, int level) {
-        this(breed, level, breed.getName());
+    public Pokemon(PokemonBreed breed, int level){
+        this(breed, level, breed.getBreed());
     }
-
     public Pokemon(PokemonBreed breed, int level, String nickName) {
         this.breed = breed;
         this.level = level;
-        this.nickName = nickName;
+        this.name = nickName;
     }
-
-
-
-
-
-
-
-    public String getNickName() {
-        return this.nickName;
-    }
-
 
     public String getName() {
-        return this.breed.getName();
+        return this.name;
     }
-
-    public void setName(String name) {
-        this.breed.setName(name);
-    }
-
-
 
     public int getLevel() {
-        return level;
+        return this.level;
     }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-
 
     public String getType() {
         return this.breed.getType();
     }
 
-    public void setType(String type) {
-        this.breed.setType(type);
-    }
-
-
-
-    public PokemonBreed getBreed() {
-        return breed;
-    }
-
-    public void setBreed(PokemonBreed breed) {
-        this.breed = breed;
+    public String getBreed() {
+        return this.breed.getBreed();
     }
 }

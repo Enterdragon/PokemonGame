@@ -6,29 +6,18 @@ public enum PokemonBreed {
     SQUIRTLE("Squirtle", "Water"),
     IVYSAUR("Ivysaur", "Grass");
 
-    private String name;
+    private String breed;
     private String type;
 
-    PokemonBreed(String name, String type) {
-        this.name = name;
+    PokemonBreed(String breed, String type) {
+        this.breed = breed;
         this.type = type;
     }
 
-
-    public String getName(){
-        return name;
+    public String getBreed(){
+        return this.breed;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getType() {
         return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-
     }
 }
